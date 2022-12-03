@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    font-family: Raleway, sans-serif;
+    margin: 0;
+    padding: 1.5em 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    background-color: silver;
+    justify-content: center;
+    width: 100%;
+    overflow: auto;
+}
+
+body .left,
+body .right {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrapper .container {
+    width: 500px;
+    max-width: 500px;
+    min-width: 280px;
+    border-radius: 8px;
+    margin: 10px;
+    background: #F8F9FA;
+    padding: 16px;
+    flex-grow: 1;
+    height: fit-content;
+}
+
+.form {
+    display: flex;
+    padding: 16px;
+    flex-direction: column;
+    /* height: 300px; */
+    /* border-radius: 16px; */
+    background-color: #d7d7d7;
+    border: 2px solid black;
+    border-radius: 10px;
+    height: fit-content;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 4px;
+    font-size: 18px;
+    font-weight: lighter;
+    text-indent: 15px;
+}
+
+.shadow {
+    box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
+}
+
+input[type=text],
+input[type=date],
+input[type=number] {
+    font-family: Raleway, sans-serif;
+    background: #F5F1FF;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 16px;
+    box-sizing: border-box;
+    margin-bottom: 8px;
+    font-size: 24px;
+}
+
+.btn-submit {
+    width: fit-content;
+    font-family: Raleway, sans-serif;
+    border-radius: 16px;
+    padding: 12px 24px;
+    border: 2px solid black;
+    color: black;
+    font-size: 20px;
+    margin-top: auto;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background: #464646;
+    color: white;
+}
+
+input[type=text],
+input[type=date],
+input[type=number],
+.btn-submit:focus {
+    outline: none;
+}
+
+table tr th,
+table tr td {
+    margin: 2px;
+    width: 200px;
+    text-align: center;
+    max-width: 125px;
+}
+
+table tr:nth-child(odd) {
+    background-color: #d7d7d7;
+}
+
+.form-display {
+    display: flex;
+    margin-left: 10px;
+}
+
+.form-display input {
+    border-color: transparent;
+    padding: 15px 20px;
+    width: 10em;
+    border-radius: 10px 10px 0 0;
+}
+
+.form-display .choosen {
+    background-color: #d7d7d7;
+    /* transform: scale(1.175); */
+    font-weight: bold;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    transform: scale(1.175) translateX(10px) translateY(-2px);
+}
+
+.form-display input:hover {
+    background-color: #d7d7d7;
+    cursor: pointer;
+}
+
+.wrapper .table-header {
+    background-color: #d7d7d7;
+}
+
+.counter h5 {
+    margin: 0 10px 0 20px;
+}
+
+.counter-text {
+    display: flex;
+    justify-content: end;
+    background-color: #d7d7d7;
+}
+
+.th-long {
+    display: inline-block;
+}
+
+.th-short {
+    display: none;
+}
+
+.wrapper .td {
+    height: 405px;
+    max-height: 405px;
+}
+
+.td-small {
+    overflow: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+
+
+.td::-webkit-scrollbar {
+    display: none;
+}
+
+.addbtn {
+    display: none;
+    position: absolute;
+    padding: 10px 14px;
+    border-radius: 5px;
+    border-color: transparent;
+    background-color: #d7d7d7;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    font-weight: bold;
+    font-size: medium;
+}
+
+.clsbtn {
+    display: none;
+    position: absolute;
+    z-index: 9;
+    top: 10px;
+    right: 10px;
+    bottom: auto;
+    padding: 10px 14px;
+    border-radius: 100%;
+    background-color: transparent;
+    border-color: transparent;
+    font-size: medium;
+    font-weight: lighter;
+}
+
+.clsbtn:hover {
+    background-color: rgb(195, 195, 195);
+    font-weight: bold;
+}
+
+.popupblur {
+    display: none;
+    z-index: 8;
+    position: fixed;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+@media only screen and (max-width: 1110px) {
+    body {
+        flex-direction: column;
+    }
+
+    .wrapper {
+        margin: 0;
+    }
+
+    .wrapper .container {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .list-item {
+        width: 90%;
+    }
+
+    .form {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        padding: 1em;
+    }
+
+    .right {
+        order: 1;
+    }
+
+    .left {
+        order: 2;
+    }
+
+    .counter {
+        order: 1;
+    }
+
+    .th-small {
+        order: 2;
+    }
+
+    .td-small {
+        order: 3;
+        font-size: x-small;
+        max-height: 300px;
+    }
+
+    .form-small {
+        display: none;
+        z-index: 9;
+        font-size: x-small;
+        position: absolute;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        max-width: 280px;
+        max-height: 360px;
+    }
+
+    .form input {
+        height: fit-content;
+    }
+
+    .form-small label,
+    .form-small input::placeholder,
+    .form-small input {
+        font-size: small;
+    }
+
+    .form-display {
+        margin: 0;
+        margin-left: 5px;
+    }
+
+    .form-display input {
+        font-size: small;
+        padding: 5px;
+        width: fit-content;
+    }
+
+    .form-display .choosen {
+        background-color: #d7d7d7;
+        font-weight: bold;
+        border-right: 2px solid black;
+        border-top: 2px solid black;
+        border-left: 2px solid black;
+        transform: scale(1.175) translateX(5px);
+    }
+
+    header {
+        text-align: center;
+    }
+
+    header p {
+        font-size: x-small;
+        border-top: 2px solid black;
+    }
+
+    .th-long {
+        display: none;
+    }
+
+    .th-short {
+        font-size: small;
+        display: inline-block;
+    }
+
+    .wrapper .container {
+        margin: 5px;
+        padding: 12px;
+    }
+
+    .btn-submit {
+        font-size: small;
+        border-radius: 8px;
+        padding: 5px 8px;
+    }
+
+    .addbtn {
+        display: block;
+    }
+}

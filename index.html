@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo Apps</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <section class="left">
+    <header class="wrapper">
+      <div class="container">
+        <h1>MaDomveth</h1>
+        <p>aplikasi web pengelola keuangan Anda..</p>
+      </div>
+    </header>
+    <div class="wrapper form-small" id="formSection">
+      <div class="container bg-white shadow" id="add-todo">
+        <div class="form-display">
+          <input type="button" id="formDisplayOut" class="choosen" value="Cash Out">
+          <input type="button" id="formDisplayIn" value="Cash In">
+        </div>
+        <form class="form" action="#" id="form">
+          <div class="form-group form-title">
+            <label id="label-title" for="title">keperluan:</label>
+            <input type="text" id="title" name="title" placeholder="deskripsi" required>
+          </div>
+          <div class="form-group form-title">
+            <label for="date">tanggal:</label>
+            <input type="date" id="date" name="date" required>
+          </div>
+          <div class="form-group form-title">
+            <label for="money">berapa uang yang dihabiskan:</label>
+            <input type="number" id="money" name="money" placeholder="Rp. xxx.xxx.xxx" required>
+          </div>
+          <input type="submit" value="Submit" name="Submit" class="btn-submit" onclick="HiddenPopUp()">
+        </form>
+      </div>
+    </div>
+  </section>
+  <section class="right">
+    <div class="wrapper th-small">
+      <div class="container shadow table-header">
+        <table>
+          <tr class="th-long">
+            <th>tanggal</th>
+            <th>keterangan</th>
+            <th>masuk</th>
+            <th>keluar</th>
+          </tr>
+          <tr class="th-short">
+            <th>tgl</th>
+            <th>ket</th>
+            <th>in</th>
+            <th>out</th>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="wrapper td-small">
+      <div class="container shadow td">
+        <table id="tables">
+          <tr>
+            <td>1-12-2022</td>
+            <td>makan</td>
+            <td>30000</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>1-12-2022</td>
+            <td>makan</td>
+            <td>30000</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>1-12-2022</td>
+            <td>makan</td>
+            <td></td>
+            <td>30000</td>
+          </tr>
+          <tr>
+            <td>1-12-2022</td>
+            <td>makan</td>
+            <td></td>
+            <td>30000</td>
+          </tr>
+          <tr>
+            <td>1-12-2022</td>
+            <td>makan</td>
+            <td>30000</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>1-12-2022</td>
+            <td>makan</td>
+            <td>30000</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>1-12-2022</td>
+            <td>makan</td>
+            <td></td>
+            <td>30000</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="wrapper counter">
+      <div class="container shadow counter-text">
+        <h3>Sisa uang anda: </h3>
+        <h5>Rp.</h5>
+        <h1>xx.xxx</h1>
+      </div>
+    </div>
+  </section>
+  <div class="popupblur" id="blur"></div>
+  <button class="addbtn" id="addButton" onclick="ShowPopUp()">+</button>
+  <button class="clsbtn" id="clsButton" onclick="HiddenPopUp()">x</button>
+  <!-- </div> -->
+  <script src="./js/script.js" type="text/javascript"></script>
+</body>
+
+</html>

@@ -1,0 +1,419 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Raleway, sans-serif;
+    box-sizing: border-box;
+    cursor: default;
+}
+
+input {
+    cursor: text;
+}
+
+button,
+a {
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+button:hover,
+a:hover {
+    transform: scale(0.75);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100%25' width='100%25'%3E%3Cdefs%3E%3Cpattern id='doodad' width='38' height='38' viewBox='0 0 40 40' patternUnits='userSpaceOnUse' patternTransform='rotate(135)'%3E%3Crect width='100%25' height='100%25' fill='rgba(247, 250, 252,1)'/%3E%3Cpath d='M-20 31l20-20l20 20l20-20l20 20l20-20l20 20v-2l-20-20l-20 20l-20-20l-20 20l-20-20l-20 20zM-20-9l20-20l20 20l20-20l20 20l20-20l20 20v-2l-20-20l-20 20l-20-20l-20 20l-20-20l-20 20zM-20 71l20-20l20 20l20-20l20 20l20-20l20 20v-2l-20-20l-20 20l-20-20l-20 20l-20-20l-20 20z ' fill='rgba(160, 174, 192,1)'/%3E%3Cpath d='M20.5 0l20 20l-20 20l20 20l-20 20l20 20l-20 20h-1l20-20l-20-20l20-20l-20-20l20-20l-20-20zM-19.5 0l20 20l-20 20l20 20l-20 20l20 20l-20 20h-1l20-20l-20-20l20-20l-20-20l20-20l-20-20zM60.5 0l20 20l-20 20l20 20l-20 20l20 20l-20 20h-1l20-20l-20-20l20-20l-20-20l20-20l-20-20z ' fill='rgba(163, 191, 250,1)'/%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23doodad)' height='200%25' width='200%25'/%3E%3C/svg%3E ");
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+    background-color: transparent;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    border-radius: 0 0 50px 0;
+    background-image: linear-gradient(to bottom, rgba(72, 61, 139, 0.8), rgba(17, 132, 218, 1)), url("../img/—Pngtree—indonesian\ rereng\ suliga\ titik\ batik_8434511.png");
+    background-size: cover;
+    color: white;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    padding: 1em 0.5em;
+    display: flex;
+    flex-direction: column;
+    font-size: xx-large;
+    transition: 0.5s;
+}
+
+header h1 span {
+    font-size: small;
+}
+
+header p {
+    font-size: small;
+    padding: 1em;
+    text-align: end;
+}
+
+header #date {
+    padding-bottom: 0;
+    transition: 0.5s;
+}
+
+header #time {
+    padding-top: 0;
+    transition: 0.5s;
+
+}
+
+main .popup_area .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    background-color: gainsboro;
+    width: 250px;
+    padding: 1em 0.5em;
+    border-radius: 15px;
+    z-index: -1;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.25s ease-in;
+    opacity: 0;
+}
+
+main .popup_area .btn_close {
+    position: absolute;
+    right: 0.5em;
+    top: 0.5em;
+    background-color: transparent;
+    border-color: transparent;
+    transition: 0.25s;
+}
+
+main .popup_area .btn_close:hover {
+    transform: scale(1.5);
+}
+
+main .popup_area .popupblur {
+    position: fixed;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.431);
+    backdrop-filter: blur(1.5px);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 1s;
+}
+
+main .popup_area .body_popup {
+    padding: 1em;
+}
+
+main .popup_area .getAnswer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+main .popup_area .btn_yes,
+main .popup_area .btn_no,
+main .popup_area .btn_ok {
+    border-radius: 10px;
+    padding: 0.5em 1em;
+    outline: none;
+    width: 6em;
+    transition: 0.5s;
+}
+
+main .popup_area .btn_yes {
+    border: 2px solid darkgreen;
+}
+
+main .popup_area .btn_no {
+    border: 2px solid darkred;
+}
+
+main .popup_area .btn_ok {
+    border: 2px solid darkblue;
+}
+
+main .popup_area .btn_yes:hover {
+    background-color: green;
+    color: white;
+}
+
+main .popup_area .btn_no:hover {
+    background-color: red;
+    color: white;
+}
+
+main .popup_area .btn_ok:hover {
+    background-color: blue;
+    color: white;
+}
+
+main .popup_area .onshow {
+    margin-top: unset;
+    z-index: 9;
+    opacity: 1;
+}
+
+main .form_box {
+    background-color: rgb(224, 224, 224);
+    padding: 2em 1em;
+    margin: 1em;
+    margin-top: -1em;
+    border-radius: 15px;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.3);
+}
+
+main .form_box form .option_form {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+main .form_box .form {
+    display: flex;
+    flex-direction: column;
+    margin: 0.25em;
+}
+
+main .form_box label {
+    margin: 0.25em;
+    text-indent: 0.5em;
+}
+
+main .form_box input[type=date],
+main .form_box input[type=text],
+main .form_box input[type=number] {
+    background: #FFF;
+    border-color: transparent;
+    display: block;
+    margin: auto;
+    width: 100%;
+    border-radius: 8px;
+    padding: 0.5em;
+    box-sizing: border-box;
+    margin-bottom: 0.5em;
+    outline: none;
+}
+
+main .form_box input[type=radio] {
+    margin-right: 0.25em;
+}
+
+main .form_box button[type=submit] {
+    display: block;
+    background: #1184DA;
+    border-color: #1184DA;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 0.5em 1em;
+    margin: 0 auto;
+    box-sizing: border-box;
+    outline: none;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+main .recap_box {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 15px;
+    background-color: rgb(224, 224, 224);
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.3);
+}
+
+main .recap_box h4 {
+    display: flex;
+    flex-direction: column;
+}
+
+main .recap_box span {
+    font-size: small;
+}
+
+main .list_box {
+    margin: 1em;
+}
+
+section .header_list {
+    display: flex;
+    margin: 1em 0;
+    justify-content: center;
+    padding: 1em;
+    border-radius: 15px;
+    background-color: rgb(224, 224, 224);
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.3);
+}
+
+section .header_list h2 {
+    margin: 0 1em;
+}
+
+section .header_list button {
+    font-weight: bold;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+section .list_data {
+    height: 300px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    border-radius: 10px;
+}
+
+section .list_data::-webkit-scrollbar {
+    width: 0;
+    background-color: transparent;
+}
+
+section .list_data .headOfTable {
+    position: sticky;
+    top: 0;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.3);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table tr th {
+    padding: 0.5em 0.25em;
+}
+
+table tr td {
+    padding: 0.25em;
+    text-align: center;
+}
+
+
+table th:nth-child(1),
+table td:nth-child(1) {
+    width: 5%;
+}
+
+table th:nth-child(2) {
+    width: 45%;
+}
+
+table td:nth-child(2) {
+    text-align: left;
+    width: 45%;
+}
+
+table th:nth-child(3),
+table td:nth-child(3),
+table th:nth-child(4),
+table td:nth-child(4) {
+    width: 25%;
+}
+
+table tr:nth-child(even) {
+    background-color: #fff;
+}
+
+table tr:nth-child(odd) {
+    background-color: #d7d7d7;
+}
+
+.show_form {
+    opacity: 0;
+    position: fixed;
+    z-index: -1;
+    bottom: 4.5em;
+    right: 0.5em;
+    border-radius: 100%;
+    width: 1.75em;
+    height: 1.75em;
+    color: white;
+    font-weight: bold;
+    background-color: #1184DA;
+    box-shadow: 0px -8px 10px rgba(0, 0, 0, 0.3);
+    border-color: #1184DA;
+    font-size: x-large;
+    transition: 0.5s;
+}
+
+footer {
+    width: 100%;
+    background-image: linear-gradient(to top, rgba(72, 61, 139, 0.8), rgba(17, 132, 218, 1)), url("../img/—Pngtree—indonesian\ rereng\ suliga\ titik\ batik_8434511.png");
+    background-size: cover;
+    color: white;
+    text-align: end;
+    border-radius: 50px 0 0 0;
+}
+
+footer h3 {
+    padding: 0.5em;
+    padding-bottom: 0;
+}
+
+footer h4 {
+    padding: 0 0.5em;
+    text-decoration: underline;
+}
+
+footer p {
+    padding: 0.5em;
+    padding-top: 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    padding: 0.25em;
+    font-size: small;
+}
+
+.onscroll header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.onscroll header h1 {
+    padding-top: 0 1em;
+    font-size: x-large;
+}
+
+.onscroll header h1 span {
+    font-size: small;
+}
+
+.onscroll header #time {
+    padding: 0.5em 1em;
+}
+
+.onscroll header #date {
+    display: none;
+}
+
+.onscroll main .form_box {
+    margin-top: 5em;
+}
+
+.copyright {
+    text-align: center;
+    opacity: 0.5;
+    font-size: x-small;
+    padding: 0.25em;
+}

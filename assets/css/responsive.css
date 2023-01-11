@@ -136,8 +136,9 @@
         text-align: center;
     }
 
-    /* pattern clipart PNG Designed By Bubuk Gorengan from https://pngtree.com/freepng/indonesian-rereng-suliga-titik-batik-pattern_8434511.html?sol=downref&id=bef */
-
+    .onscroll header h1{
+        padding: 1em;
+    }
     .onscroll header #time,
     .onscroll header #date {
         padding: unset;

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="in">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="google" content="notranslate">
+    <title>MaDomveth | pengelola keuangan</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+</head>
+
+<body>
+    <header>
+        <p id="date"></p>
+        <p id="time"></p>
+        <h1 id="headerUang"></h1>
+    </header>
+    <main>
+        <section class="popup_area">
+            <div class="popupblur"></div>
+            <div class="popup">
+                <button class="btn_close" id="close">&#x2715</button>
+                <div class="body_popup">
+                </div>
+                <div class="getAnswer"></div>
+            </div>
+        </section>
+        <section class="form_box">
+            <form id="inputData">
+                <div class="option_form">
+                    <label for="in"><input type="radio" name="optionForm" id="in">pemasukan</label>
+                    <label for="out"><input type="radio" name="optionForm" id="out" checked>pengeluaran</label>
+                </div>
+                <div class="form">
+                    <label for="tanggal">tanggal:</label>
+                    <input type="date" id="tanggal" value="">
+                </div>
+                <div class="form">
+                    <label for="deskripsi">keperluan:</label>
+                    <input type="text" id="desc" placeholder="deskripsi" required>
+                </div>
+                <div class="form">
+                    <label for="cashInput">tunai: </label>
+                    <input type="number" id="cashInput" placeholder="Rp. ###.###.###" required>
+                </div>
+                <button type="submit">submit</button>
+            </form>
+        </section>
+        <section class="recap_box">
+            <h4 id="recapIn"></h4>
+            <h4 id="recapOut"></h4>
+        </section>
+        <section class="list_box">
+            <div class="header_list" id="headerListData">
+                <button id="btnPrev">&#60</button>
+                <h2 id="tittleList"></h2>
+                <button id="btnNext">&#62</button>
+            </div>
+            <div class="list_data">
+                <table id="listData"></table>
+            </div>
+        </section>
+        <button class="show_form" id="showForm">+</button>
+    </main>
+    <footer>
+        <h3>MaDomveth</h3>
+        <h4>Aplikasi Web Pengelola Keuangan</h4>
+        <p>
+            <a id="resetData">Reset</a>|<a href="#">About Me</a>|<a href="#">Message Me</a>
+        </p>
+        <a class="copyright" target="_blank"
+            href="https://pngtree.com/freepng/indonesian-rereng-suliga-titik-batik-pattern_8434511.html?sol=downref&id=bef">Batik
+            Designed By Bubuk Gorengan from pngtree</a>
+    </footer>
+</body>
+
+<script src="./assets/js/main.js"></script>
+
+</html>

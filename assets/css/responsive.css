@@ -1,0 +1,174 @@
+@media only screen and (min-width: 768px) {
+    header {
+        position: fixed;
+        width: 80%;
+        border-radius: 0 0 100px 100px;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        z-index: 3;
+    }
+
+    header h1 {
+        padding: 0 1.5em 0.5em 1.5em;
+        text-align: center;
+    }
+
+    header h1 span {
+        font-size: large;
+    }
+
+    header p {
+        font-size: smaller;
+        padding: 1em 2em 0 2em;
+    }
+
+    main .form_box {
+        width: 70%;
+        padding: 2em 1em 3em 1em;
+        margin: 9em auto 1em auto;
+        border-radius: 15px;
+        box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.3);
+        transition: 1s;
+    }
+
+    main .form_box label {
+        text-indent: 1em;
+
+    }
+
+    main .form_box input[type=date],
+    main .form_box input[type=text],
+    main .form_box input[type=number] {
+        background: #F5F1FF;
+        border-color: #E0E0E0;
+        font-size: large;
+    }
+
+    main .form_box input[type=radio] {
+        cursor: pointer;
+    }
+
+    main .form_box button[type=submit] {
+        padding: 1em 2em;
+        margin: 0em auto;
+    }
+
+    main .recap_box {
+        width: 100%;
+        justify-content: center;
+        text-align: unset;
+        margin: unset;
+        padding: unset;
+        border-radius: unset;
+        background-color: unset;
+        box-shadow: unset;
+    }
+
+    main .recap_box #recapIn,
+    main .recap_box #recapOut {
+        text-align: center;
+        width: 35%;
+        padding: 1em;
+        border-radius: 15px;
+        background-color: rgb(224, 224, 224);
+        box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.3);
+        margin: 0.15em;
+        transition: 1s;
+    }
+
+    main .recap_box h4 {
+        font-size: large;
+    }
+
+    main .recap_box span {
+        font-size: small;
+    }
+
+    main .list_box {
+        margin: 1em auto 1em auto;
+        width: 70%;
+        border-radius: 5px;
+    }
+
+    section .header_list {
+        justify-content: space-between;
+        padding: unset;
+        border-radius: unset;
+        background-color: unset;
+        box-shadow: unset;
+    }
+
+    section .header_list h2 {
+        margin: 0 0.5em;
+        text-align: center;
+        padding: 1em;
+        width: 80%;
+        background-color: rgb(224, 224, 224);
+        box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        transition: 1s;
+    }
+
+    section .header_list button {
+        width: 10%;
+        padding: 1em;
+        background-color: rgb(224, 224, 224);
+        box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+    }
+
+    section .list_data {
+        height: 450px;
+        box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.3);
+        transition: 1s;
+    }
+
+    table tr th {
+        padding: 0.5em;
+    }
+
+    footer {
+        width: 75%;
+        border-radius: 100px 100px 0 0;
+        margin: 1em auto 0 auto;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    /* pattern clipart PNG Designed By Bubuk Gorengan from https://pngtree.com/freepng/indonesian-rereng-suliga-titik-batik-pattern_8434511.html?sol=downref&id=bef */
+
+    .onscroll header #time,
+    .onscroll header #date {
+        padding: unset;
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    main .form_box {
+        width: 50%;
+    }
+
+    main .form_box:hover,
+    main .recap_box #recapIn:hover,
+    main .recap_box #recapOut:hover,
+    section .header_list h2:hover,
+    section .list_data:hover {
+        transform: translate(-50%, -50%);
+        transform: scale(1.05);
+    }
+
+    main .recap_box #recapIn,
+    main .recap_box #recapOut {
+        width: 25%;
+    }
+
+    main .list_box {
+        width: 50%;
+    }
+
+    footer {
+        width: 60%;
+    }
+}

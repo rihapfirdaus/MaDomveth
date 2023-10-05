@@ -34,7 +34,6 @@
 
     main .form_box label {
         text-indent: 1em;
-
     }
 
     main .form_box input[type=date],
@@ -157,7 +156,7 @@
     section .header_list h2:hover,
     section .list_data:hover {
         transform: translate(-50%, -50%);
-        transform: scale(1.05);
+        transform: scale(1);
     }
 
     main .recap_box #recapIn,
